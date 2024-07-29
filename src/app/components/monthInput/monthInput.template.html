@@ -1,0 +1,27 @@
+<div class="month-input-container acid-container">
+  <input
+    #monthInput
+    [formControl]="inputControl"
+    class="month-input-container__input acid-container__input nostyle-input"
+    placeholder="month"
+    type="text"
+    (click)="expand();"
+    readonly
+  />
+
+  @if(dropDownState){
+  <ul
+    class="month-input-container__ddown acid-container__ddown nostyle-list"
+    @animeTrigger
+  >
+    @for (item of items; track item; let i = $index) {
+    <li
+      [ngClass]="{'acid-container__ddown-item--current': item == this.actualMonth, 'acid-container__ddown-item': true}"
+      (click)="setValue(item, i)"
+    >
+      <span>{{item}}</span>
+    </li>
+    }
+  </ul>
+  }
+</div>

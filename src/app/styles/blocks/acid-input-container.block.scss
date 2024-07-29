@@ -1,0 +1,84 @@
+.acid-container {
+  position: relative;
+  min-height: 50px;
+  width: 100%;
+
+  &__input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px 0px;
+    z-index: 10;
+    width: 100%;
+    font-family: $font;
+    font-weight: bold;
+    color: $acid;
+    border: $acid-border-thin;
+    text-transform: uppercase;
+    background-color: $black;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 18px;
+  }
+
+  &__ddown {
+    position: absolute;
+    top: 50px;
+    max-height: 120px;
+    background-color: $black;
+    border: $acid-border-thin;
+    border-radius: 15px;
+    z-index: 11;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    font-family: $font;
+    font-size: 20px;
+    color: $acid;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.15s linear;
+    width: 100%;
+  }
+
+  &__ddown-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 25px;
+    transition: 0.15s linear;
+  }
+
+  &__ddown-item:hover {
+    background-color: $acid;
+    color: $black;
+  }
+
+  &__ddown-item--current {
+    background-color: $acid;
+    color: $black;
+  }
+
+  &__error {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    top: 0px;
+    z-index: 9;
+    min-height: 45px;
+    max-height: 80px;
+    font-family: $font;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(85, 160, 195);
+    width: 100%;
+    background-color: $acid;
+    border-radius: 15px;
+    text-transform: uppercase;
+  }
+
+  &::placeholder {
+    font-family: $font;
+    font-size: 14px;
+  }
+}
