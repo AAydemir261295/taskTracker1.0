@@ -2,13 +2,14 @@ import {
   Component,
   ElementRef,
   forwardRef,
+  Input,
   OnInit,
   ViewChild,
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { NgClass } from '@angular/common';
 import { ddownAnimation } from '../../animations/ddown.animation';
-import { DateInput } from '../../core/dateInput.class';
+import { QwertyInput } from '../../core/qwertyInput.class';
 
 @Component({
   selector: 'day-input',
@@ -25,7 +26,7 @@ import { DateInput } from '../../core/dateInput.class';
   styleUrls: ['./dayInput.style.scss'],
   animations: [ddownAnimation],
 })
-export class DayInputComponent extends DateInput implements OnInit {
+export class DayInputComponent extends QwertyInput implements OnInit {
   constructor() {
     super();
   }
