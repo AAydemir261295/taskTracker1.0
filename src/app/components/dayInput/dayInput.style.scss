@@ -1,0 +1,14 @@
+@import "variables";
+
+.day-input-container {
+  width: 40px;
+
+  &__input {
+    width: 100%;
+    padding: 10px 0px;
+  }
+
+  &__ddown {
+    width: 40px;
+  }
+}

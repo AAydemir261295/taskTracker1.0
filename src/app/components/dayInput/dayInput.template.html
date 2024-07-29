@@ -1,0 +1,28 @@
+<div class="day-input-container acid-container">
+  <input
+    #dayInput
+    [formControl]="inputControl"
+    class="day-input-container__input acid-container__input nostyle-input"
+    placeholder="day"
+    type="text"
+    (click)="expand()"
+    readonly
+  />
+
+  <!-- [@animeTrigger]="animeState" -->
+  @if(dropDownState){
+  <ul
+    class="day-input-container__ddown acid-container__ddown nostyle-list"
+    @animeTrigger
+  >
+    @for (item of items; track item) {
+    <li
+      [ngClass]="{'acid-container__ddown-item--current': item == this.today, 'acid-container__ddown-item': true}"
+      (click)="setValue(item)"
+    >
+      <span>{{item}}</span>
+    </li>
+    }
+  </ul>
+  }
+</div>
