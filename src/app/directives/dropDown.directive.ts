@@ -1,12 +1,5 @@
-import {
-  ComponentRef,
-  Directive,
-  ElementRef,
-  HostListener,
-  Input,
-} from '@angular/core';
-import { DayInputComponent } from '../components/dayInput/dayInput.component';
-import { DateInput } from '../core/dateInput.class';
+import { Directive, HostListener, Input } from '@angular/core';
+import { QwertyInput } from '../core/qwertyInput.class';
 
 @Directive({
   standalone: true,
@@ -14,7 +7,7 @@ import { DateInput } from '../core/dateInput.class';
 })
 export class DropDownDirective {
   @Input()
-  dropDown: DateInput;
+  dropDown: QwertyInput;
 
   constructor() {}
 
