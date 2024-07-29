@@ -1,0 +1,27 @@
+<div class="year-input-container acid-container">
+  <input
+    #yearInput
+    [formControl]="inputControl"
+    class="year-input-container__input acid-container__input nostyle-input"
+    placeholder="year"
+    type="text"
+    (click)="expand()"
+    readonly
+  />
+
+  @if(dropDownState){
+  <ul
+    class="year-input-container__ddown acid-container__ddown nostyle-list"
+    @animeTrigger
+  >
+    @for (item of items; track item) {
+    <li
+      [ngClass]="{'acid-container__ddown-item--current': item == this.actualYear, 'acid-container__ddown-item': true}"
+      (click)="setValue(item)"
+    >
+      <span>{{item}}</span>
+    </li>
+    }
+  </ul>
+  }
+</div>
