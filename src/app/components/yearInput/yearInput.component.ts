@@ -9,7 +9,7 @@ import { NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 
 import { NgClass } from '@angular/common';
 import { ddownAnimation } from '../../animations/ddown.animation';
-import { DateInput } from '../../core/dateInput.class';
+import { QwertyInput } from '../../core/qwertyInput.class';
 
 @Component({
   selector: 'year-input',
@@ -26,7 +26,7 @@ import { DateInput } from '../../core/dateInput.class';
   styleUrls: ['./yearInput.style.scss'],
   animations: [ddownAnimation],
 })
-export class YearInputComponent extends DateInput implements OnInit {
+export class YearInputComponent extends QwertyInput implements OnInit {
   constructor() {
     super();
   }
