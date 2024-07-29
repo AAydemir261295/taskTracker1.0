@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import "variables";
+@import "./app/styles/fonts/fonts.scss";
+@import "./app/styles/mixins/nostyle.scss";
+@import "./app/styles/blocks/acid-input-container.block.scss";
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $black;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  align-items: center;
+  // overflow: hidden;
+}
